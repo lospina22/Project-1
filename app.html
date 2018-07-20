@@ -1,0 +1,56 @@
+<html>
+<head>
+  <style>
+  .header {
+    width: 100%;
+    height: 150px;
+    background-color: rgb(165,200,130);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    box-shadow: 10px 10px 5px rgb(78,103,102);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header h1 {
+    font-family: 'Arsenal', sans-serif;
+    color: rgb(78,103,102);
+    font-size: 10em;
+  }
+    body {
+      margin:0;
+    }
+    #textbox {
+      height: 300px;
+      width: 50%;
+      padding: 25px 25px;
+      display: block;
+      margin: 0 auto;
+    }
+    .button {
+      background-color: rgb(90,177,187);
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 11pt;
+    }
+  @import url('https://fonts.googleapis.com/css?family=Muli');
+  @import url('https://fonts.googleapis.com/css?family=Arsenal:');
+  </style>
+<body>
+<h1 class="header"> Memorize </h1>
+<input type="text" id="textbox"/>
+<button class="button" onclick="enterbutton()"> Go </button>
+<script>
+var textbox = document.getElementById("textbox")
+function enterbutton() {
+  console.log(textbox.value);
+}
+</script>
+</body>
+</html>
