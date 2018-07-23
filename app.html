@@ -13,44 +13,189 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    color: rgb(59,86,85);
   }
-  .header h1 {
-    font-family: 'Arsenal', sans-serif;
-    color: rgb(78,103,102);
-    font-size: 10em;
+  h1 {
+    font-size: 50pt;
+    font-family: 'Muli', sans-serif;
   }
-    body {
-      margin:0;
+  body {
+    margin: 0;
+    background-color: rgb(249,251,255);
+
+  }
+
+    p {
+      font-family: 'Muli', sans-serif;
+      color: rgb(78,103,102);
+      margin-bottom: 30px;
     }
     #textbox {
       height: 300px;
-      width: 50%;
+      width: 70%;
       padding: 25px 25px;
       display: block;
       margin: 0 auto;
+      font-family: 'Muli', sans-serif;
+      color: rgb(78,103,102);
+      font-size: 11pt;
     }
     .button {
       background-color: rgb(90,177,187);
       border: none;
       color: white;
-      padding: 15px 32px;
+      padding: 10px 30px;
       text-align: center;
       text-decoration: none;
       display: inline-block;
       font-size: 11pt;
+      margin-top: 15px;
+      margin-bottom: 25px;
+    }
+    #otherbutton {
+      margin-left: 1075px;
+    }
+    #buttonone {
+      margin-left: 675px;
+    }
+    h2 {
+      font-family: 'Muli', sans-serif;
+      color: rgb(90,177,187);
+      margin-top: 2em;
+      padding: .5em;
+      font-size: 20pt;
+      margin-left: -14px;
+      margin-bottom: .5em;
+    }
+    .container {
+      width: 50%;
+      margin: 0 auto;
     }
   @import url('https://fonts.googleapis.com/css?family=Muli');
-  @import url('https://fonts.googleapis.com/css?family=Arsenal:');
+  @import url('https://fonts.googleapis.com/css?family=Arsenal');
+  @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+.card-container {
+  cursor: pointer;
+  height: 400px;
+  perspective: 600;
+  position: relative;
+  width: 600px;
+  color: rgb(30,21,42);
+  vertical-align: 50%;
+}
+.card {
+  background-color: rgb(255, 237, 168);
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+  width: 100%;
+  font-family: 'Muli', sans-serif;
+  font-size: 16pt;
+  text-align: center;
+  margin: auto;
+}
+.text {
+  line-height: 1.5;
+  vertical-align: middle;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: center;
+  vertical-align: center;
+}
+.card-active {
+  transform: rotateY(180deg);
+}
+.card .side {
+  backface-visibility: hidden;
+  border-radius: 6px;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+}
+.card .side-back {
+  transform: rotateY(180deg);
+}
   </style>
 <body>
 <h1 class="header"> Memorize </h1>
-<input type="text" id="textbox"/>
-<button class="button" onclick="enterbutton()"> Go </button>
+<div class="container">
+<h2> Personalized Study Cards </h2>
+<p> Make your own study cards for memorizing, vocabulary, and tests. Type in the term
+  and then a definition seperated by a semicolon and two forward slashes in between terms (but not the last term).
+  For example, geometry ; a math class //. Press Go to start learning. Refresh the page to make another set. </p>
+<textarea id="textbox" class="hide"></textarea>
+<button class="button hide" id="buttonone" onclick="goButton()"> Go </button>
+<div class="card-container container">
+  <div class="card container" onclick="flipCard()">
+    <div class="side container text"> Term </div>
+    <div class="side side-back container text"> Definition </div>
+  </div>
+</div>
+</div>
+<button class="button" id="otherbutton" onclick="nextCard()"> Next Card </button>
 <script>
+
 var textbox = document.getElementById("textbox")
-function enterbutton() {
+textbox.value = `Cat ; domesticated feline //
+Dog; domesticated canine`;
+
+var fronts = [];
+var backs = [];
+var currentCard = 0;
+
+function enterButton() {
+  var textbox = document.getElementById("textbox")
+  var x = textbox.value;
+  y=x.split("//");
+  y.forEach(cleanEntry);
   console.log(textbox.value);
 }
+
+  function deleteStuff() {
+    var nomore = document.querySelector(".hide");
+    if (nomore.style.display === "none") {
+      nomore.style.display = "block";
+    }
+    else {
+      nomore.style.display = "none";
+    }
+  }
+
+function cleanEntry(entry) {
+  var pieces = entry.split(";");
+  fronts.push(pieces[0].trim());
+  backs.push(pieces[1].trim());
+}
+
+function goButton() {
+  enterButton();
+  deleteStuff();
+  populateCard();
+}
+
+function nextCard() {
+  currentCard = currentCard + 1;
+  populateCard();
+}
+
+function flipCard() {
+  var card = document.querySelector(".card")
+  if (card.className == "card") {
+    card.className = "card card-active";
+  }
+  else {
+    card.className = "card";
+  }
+}
+
+function populateCard() {
+  document.querySelector(".side").innerHTML = fronts[currentCard];
+  document.querySelector(".side-back").innerHTML = backs[currentCard];
+}
+
 </script>
 </body>
 </html>
