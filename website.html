@@ -1,0 +1,429 @@
+<html>
+<head>
+  <style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'EB Garamond', serif;
+  }
+  @import url('https://fonts.googleapis.com/css?family=EB+Garamond');
+  @import url('https://fonts.googleapis.com/css?family=Abel');
+  #background {
+    width: 100%;
+  }
+  #container {
+    overflow: scroll;
+    background-image: url("campus-map.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  #header {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: #0058A0;
+    padding: 12px 10px;
+}
+#button{
+  padding: ;
+  background-color: : #0058A0;
+  border: solid white;
+  font-size: 30pt;
+  margin-bottom: 20px;
+  margin-top: 12px;
+  text-decoration: none;
+}
+.interface {
+  background-color: : #0058A0;
+  border: solid white;
+  font-size: 30pt;
+  margin-bottom: 20px;
+  margin-top: 12px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+.box {
+  width: 80%;
+  border: white;
+  padding: 25px;
+  margin: 25px;
+  background-color: white;
+  border-radius: 15px;
+  height: 800px;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  }
+  #july-title {
+    margin-top: -10px;
+    margin-left: 50px;
+    font-size: 15pt;
+    font-family: 'Abel', sans-serif;
+  }
+  #dot1 {
+    height: 10px;
+    width: 10px;
+    background-color: rgb(0,0,255);
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 200px;
+    margin-top: -35px;
+  }
+  #colorcode1 {
+    width: 24%;
+    margin-left: 230px;
+    margin-top: -45px;
+  }
+  #dot2 {
+  height: 11px;
+  width: 11px;
+  background-color: rgb(0,145,69);
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 600px;
+  margin-top: -42px;
+}
+  #colorcode2 {
+    margin-left: 625px;
+    margin-top: -46px;
+    width: 24%;
+  }
+  a:active {
+    transform: translateY(2px);
+  }
+  a {
+    color: white;
+  }
+  .day-names {
+    font-family: 'Abel', sans-serif;
+    font-size: 8pt;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-left: 50px;
+    width: 80%;
+    margin-left: 175px;
+  }
+  .weekends {
+    color: rgb(186,186,186);
+  }
+  .weekdays {
+    color: rgb(145,145,145);
+  }
+  .august {
+    color: rgb(186,186,186);
+  }
+  .sundays, .saturdays {
+    color: rgb(145,145,145);
+    background-color: rgb(240,240,240);
+  }
+  .sundays, .mondays, .tuesdays, .wednesdays, .thursdays, .fridays, .saturdays {
+    padding: 10px 10px;
+  }
+  .day {
+    width: 12%;
+    border: 1px solid #e0e0e0;
+    font-size: 8pt;
+    text-align: right;
+    height: 100px;
+  }
+.calendar {
+  height: 90%;
+  width: 80%;
+  margin: 0 auto;
+}
+.bus-stop {
+  color: #009145;
+}
+.kemper {
+  color: #0000FF;
+}
+.events {
+  font-size: 10pt;
+  text-align: left;
+}
+.week {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+}
+.underline {
+  text-decoration: underline;
+  text-decoration-color: red;
+}
+.collegetrips {
+  width: 20%;
+  height: 675px;
+  border: 2px solid gray;
+  padding: 10px 10px;
+  background-color: white;
+  border-radius: 10px;
+  text-align: left;
+  position: absolute;
+}
+.collegetrips * {
+  background-color: rgba(255,255,255,0.5);
+}
+.college-header {
+  font-size: 15pt;
+  padding-bottom: 7px;
+}
+.university-label {
+  font-size: 12pt;
+  padding-bottom: 2px;
+}
+.college-photos {
+  width: 200px;
+  height: 100px;
+  padding: 2px 2px;
+  margin: 0 auto;
+  display: block;
+}
+#collegetrip1 {
+  left: 825px;
+  top: 150px;
+}
+#collegetrip2 {
+  left: 350px;
+  top: 200px;
+}
+#collegetrip3 {
+  left: 825px;
+  top: 250px;
+}
+#collegetrip4 {
+  left: 350px;
+  top: 300px;
+}
+  </style>
+</head>
+<body>
+  <div id="header">
+  <h1> <strong> Phillips Academy-Summer Session </strong> </h1>
+  <a class="interface" href="calender.html"> <strong> Calender </strong> </a>
+  <a class="interface" href="index.html"> Home </a>
+  </div>
+  <div id="container">
+  <div class="box">
+  <p id="july-title"> <strong> July </strong> 2018 </p>
+  <span id="dot1"></span>
+  <p id="colorcode1"><strong> Located in Kemper Aditorium between 2:10 - 3:10pm beside College Trip </strong> </p>
+  <span id="dot2"></span>
+  <p id="colorcode2"><strong> Meet in Bus Stop</p>
+  <div class="day-names">
+    <p class="weekends"> Sun </p>
+    <p class="weekdays"> Mon </p>
+    <p class="weekdays"> Tue </p>
+    <p class="weekdays"> Wed </p>
+    <p class="weekdays"> Thu </p>
+    <p class="weekdays"> Fri </p>
+    <p class="weekends"> Sat </p>
+  </div>
+    <div class="calendar">
+      <div class="week">
+    <div class="sundays first-week day"> Jul 1 </div>
+    <div class="mondays first-week day"> 2 </div>
+    <div class="tuesdays first-week day"> 3 </div>
+    <div class="wednesdays first-week day"> 4 </div>
+    <div class="thursdays first-week day"> 5 </div>
+    <div class="fridays first-week day"> 6 </div>
+    <div class="saturdays first-week day"> 7
+    <p class="bus-stop events"> Canobie Lake Park 3 - 11pm -- $50 </p>
+    </div>
+  </div>
+  <div class="week">
+    <div class="sundays second-week day"> 8
+      <p class="bus-stop events"> The Loop 11am - 5pm -- $10 </p>
+    </div>
+    <div class="mondays second-week day"> 9
+      <p class="kemper events underline">Opening Session!</p>
+    </div>
+    <div class="tuesdays second-week day"> 10
+      <p class="kemper events"> International Student for U.S. College </p>
+    </div>
+    <div class="wednesdays second-week day" onmouseover="collegetrip1()" onmouseout="noCollege()"> 11
+    <p class="kemper events underline">College Trips</p>
+    </div>
+    <div class="thursdays second-week day"> 12
+      <p class="kemper events"> A look inside College Admissions </p>
+    </div>
+    <div class="fridays second-week day"> 13
+      <p class="kemper events"> Finding the Right fit for College </p>
+    </div>
+    <div class="saturdays second-week day"> 14
+      <p class="bus-stop events"> Boston Trip 12 - 5pm -- $10 ; Mall at
+        Rockingham Park 1 - 6 pm $10 </p>
+    </div>
+  </div>
+  <div class="week">
+    <div class="sundays third-week day"> 15
+      <p class="bus-stop events"> Miniature Golf 12 - 4pm -- $10 ;
+        Hampton Beach 10:30am - 5:30pm -- $10 </p>
+    </div>
+    <div class="mondays third-week day"> 16
+      <p class="kemper events"> Harvard Information Session </p>
+    </div>
+    <div class="tuesdays third-week day"> 17
+      <p class="kemper events"> Who gets in and Why? </p>
+    </div>
+    <div class="wednesdays third-week day" onmouseover="collegetrip2()" onmouseout="noCollege()"> 18
+      <p class="kemper events underline">College Trips</p>
+    </div>
+    <div class="thursdays third-week day"> 19
+      <p class="kemper events underline">Annual College Fair 6-7:30pm</p>
+    </div>
+    <div class="fridays third-week day"> 20
+      <p class="kemper events"> Holistic Admissions at Colleges </p>
+    </div>
+    <div class="saturdays third-week day"> 21
+      <p class="bus-stop events"> Outlet Shopping 12:30 - 6:30 pm -- $10 </p>
+    </div>
+  </div>
+  <div class="week">
+    <div class="sundays fourth-week day"> 22
+      <p class="bus-stop events"> Water Country 11am - 5pm --$50 </p>
+    </div>
+    <div class="mondays fourth-week day"> 23
+      <p class="kemper events"> Evaluating College Application Essay </p>
+    </div>
+    <div class="tuesdays fourth-week day"> 24
+      <p class="kemper events"> The Interview: Tips for Success </p>
+    </div>
+    <div class="wednesdays fourth-week day" onmouseover="collegetrip3()" onmouseout="noCollege()"> 25
+      <p class="kemper events underline">College Trips</p>
+    </div>
+    <div class="thursdays fourth-week day"> 26
+      <p class="kemper events"> How to Address Supplemental Essays </p>
+    </div>
+    <div class="fridays fourth-week day"> 27
+      <p class="kemper events"> Managing your Social Media </p>
+    </div>
+    <div class="saturdays fourth-week day"> 28
+      <p class="bus-stop events"> Boston Trip 12 - 5pm -- $10 ; Mall at Rockingham
+        Park 1 - 6pm -- $10 </p>
+    </div>
+  </div>
+  <div class="week">
+    <div class="sundays fifth-week day"> 29
+      <p class="bus-stop events"> Whale Watch 11am - 4pm --$40 ; Hampton Beach
+      10:30 - 5pm -- $10 </p>
+    </div>
+    <div class="mondays fifth-week day"> 30
+      <p class="kemper events"> Interactive Experience with College Admissions </p>
+    </div>
+    <div class="tuesdays fifth-week day"> 31
+      <p class="kemper events"> Choosing your Major </p>
+    </div>
+    <div class="wednesdays fifth-week day august" onmouseover="collegetrip4()" onmouseout="noCollege()"> Aug 1
+      <p class="kemper events underline">College Trips</p>
+    </div>
+    <div class="thursdays fifth-week day august"> 2
+      <p class="kemper events"> Building your Resume </p>
+    </div>
+    <div class="fridays fifth-week day august"> 3
+      <p class="kemper events underline">Closing Session</p>
+    </div>
+    <div class="saturdays fifth-week day august"> 4
+      <p class="bus-stop events"> Last Night </p>
+    </div>
+  </div>
+  <div class="week">
+    <div class="sundays sixth-week day august"> 5 </div>
+    <div class="mondays sixth-week day august"> 6 </div>
+    <div class="tuesdays sixth-week day august"> 7 </div>
+    <div class="wednesdays sixth-week day august"> 8 </div>
+    <div class="thursdays sixth-week day august"> 9 </div>
+    <div class="fridays sixth-week day august"> 10 </div>
+    <div class="saturdays sixth-week day august"> 11 </div>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+</strong>
+<div class="collegetrips" id="collegetrip1">
+  <p class="college-header"><strong> Meet by Bus Stop</strong> </p>
+  <p class="university-label"> Harvard University </p>
+  <img class="college-photos" src="harvarduniversity.jpg"> </img>
+  <p class="university-label"> Tufts University </p>
+  <img class="college-photos" src="TuftsUniversity.jpg"> </img>
+  <p class="university-label"> Brown University </p>
+  <img class="college-photos" src="brownuniversity.jpg"> </img>
+  <p class="university-label"> Northeastern University </p>
+  <img class="college-photos" src="northeasternuniversity.jpg"> </img>
+</div>
+<div class="collegetrips" id="collegetrip2">
+  <p class="college-header"><strong> Meet by Bus Stop</strong> </p>
+  <p class="university-label"> Harvard University </p>
+  <img class="college-photos" src="harvarduniversity.jpg"> </img>
+  <p class="university-label"> MIT University </p>
+  <img class="college-photos" src="mituniversity.jpg"> </img>
+  <p class="university-label"> Brown University </p>
+  <img class="college-photos" src="brownuniversity.jpg"> </img>
+  <p class="university-label"> Wellesley College </p>
+  <img class="college-photos" src="wellesleyCollege.jpg"> </img>
+</div>
+<div class="collegetrips" id="collegetrip3">
+  <p class="college-header"><strong> Meet at Bus Stop</strong> </p>
+  <p class="university-label"> Harvard University </p>
+  <img class="college-photos" src="harvarduniversity.jpg"> </img>
+  <p class="university-label"> Boston University </p>
+  <img class="college-photos" src="bostonuniversity.jpg"> </img>
+  <p class="university-label"> Yale University </p>
+  <img class="college-photos" src="yaleCollege.jpg">
+  <p class="university-label"> Dartmouth College </p>
+  <img class="college-photos" src="dartmouthcollege.jpg"> </img>
+</div>
+<div class="collegetrips" id="collegetrip4">
+  <p class="college-header"><strong> Meet at Bus Stop</strong> </p>
+  <p class="university-label"> Harvard University </p>
+  <img class="college-photos" src="harvarduniversity.jpg"> </img>
+  <p class="university-label"> Amherst College </p>
+  <img class="college-photos" src="armherstcollege.jpg"> </img>
+  <p class="university-label"> Boston College </p>
+  <img class="college-photos" src="bostoncollege.jpg">
+  <p class="university-label"> Tufts University </p>
+  <img class="college-photos" src="TuftsUniversity.jpg"> </img>
+</div>
+
+</body>
+<script>
+var one = document.getElementById("collegetrip1");
+var two = document.getElementById("collegetrip2");
+var three = document.getElementById("collegetrip3");
+var four = document.getElementById("collegetrip4");
+function collegetrip1() {
+  one.style.visibility = "visible";
+  two.style.visibility = "hidden";
+  three.style.visibility = "hidden";
+  four.style.visibility = "hidden";
+}
+function collegetrip2() {
+  one.style.visibility = "hidden";
+  two.style.visibility = "visible";
+  three.style.visibility = "hidden";
+  four.style.visibility = "hidden";
+}
+function collegetrip3() {
+  one.style.visibility = "hidden";
+  two.style.visibility = "hidden";
+  three.style.visibility = "visible";
+  four.style.visibility = "hidden";
+}
+function collegetrip4() {
+  one.style.visibility = "hidden";
+  two.style.visibility = "hidden";
+  three.style.visibility = "hidden";
+  four.style.visibility = "visible";
+}
+function noCollege() {
+  one.style.visibility = "hidden";
+  two.style.visibility = "hidden";
+  three.style.visibility = "hidden";
+  four.style.visibility = "hidden";
+}
+noCollege();
+</script>
+</html>
